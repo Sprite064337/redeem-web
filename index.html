@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>แลกโค้ด</title>
+
+<style>
+body{
+    background:#f5f5f5;
+    font-family:sans-serif;
+    text-align:center;
+    padding-top:80px;
+}
+
+.box{
+    background:white;
+    width:350px;
+    margin:auto;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+input{
+    width:90%;
+    padding:10px;
+    font-size:18px;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 25px;
+    font-size:18px;
+}
+
+img{
+    width:250px;
+    margin-top:20px;
+    display:none;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+<h2>แลกคูปอง</h2>
+
+<input id="code" placeholder="กรอกโค้ด">
+
+<br>
+
+<button onclick="check()">ยืนยัน</button>
+
+<br>
+
+<img id="coupon" src="coupon.png">
+
+<p id="text"></p>
+
+</div>
+
+<script>
+
+function check(){
+
+let code=document.getElementById("code").value;
+
+if(code=="ABC123"){
+
+document.getElementById("coupon").style.display="block";
+
+document.getElementById("text").innerHTML="ยืนยันสำเร็จ";
+
+}else{
+
+document.getElementById("text").innerHTML="โค้ดไม่ถูกต้อง";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
